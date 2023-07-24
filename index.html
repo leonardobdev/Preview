@@ -13,13 +13,15 @@
 				cbAuto = document.getElementById("cbAuto"),
 				old = "",
 			run=()=>{
-				outText.srcdoc = inText.value;
-				if (cbAuto.checked && inText.value != old) {
+				if (inText.value != old) {
+					outText.srcdoc = inText.value;
+					old = inText.value;
+				}
+				if (cbAuto.checked) {
 					setTimeout(() => {
 						run();
 					}, 100);
 				}
-				old = inText.value;
 			},
 			resize=()=>{
 				if (btResize.value=="vertical") {
