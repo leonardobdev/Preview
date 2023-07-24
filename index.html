@@ -10,8 +10,13 @@
 				outText = document.getElementById("outText"),
 				btRun = document.getElementById("btRun"),
 				btResize = document.getElementById("btResize"),
+				cbAuto = document.getElementById("cbAuto"),
+				old = "",
 			run=()=>{
 				outText.srcdoc = inText.value;
+				if (cbAuto.cheked && inText.value != old) {
+					
+				}
 			},
 			resize=()=>{
 				if (btResize.value=="vertical") {
