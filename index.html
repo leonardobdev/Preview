@@ -14,8 +14,10 @@
 				old = "",
 			run=()=>{
 				outText.srcdoc = inText.value;
-				if (cbAuto.cheked && inText.value != old) {
-					
+				if (cbAuto.checked && inText.value != old) {
+					setTimeout(() => {
+						run();
+					}, 100);
 				}
 			},
 			resize=()=>{
@@ -30,6 +32,7 @@
 			};
 			btRun.addEventListener("click", run);
 			btResize.addEventListener("click", resize);
+			cbAuto.addEventListener("checked", run);
 		});
 	</script>
 	<style>
