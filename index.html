@@ -6,12 +6,12 @@
 	<title>preview</title>
 	<script>
 		window.addEventListener("load", () => {
+			var old = "";
 			const inText = document.getElementById("inText"),
 				outText = document.getElementById("outText"),
 				btRun = document.getElementById("btRun"),
 				btResize = document.getElementById("btResize"),
 				cbAuto = document.getElementById("cbAuto"),
-				old = "",
 			run=()=>{
 				if (inText.value != old) {
 					outText.srcdoc = inText.value;
