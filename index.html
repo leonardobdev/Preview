@@ -14,15 +14,7 @@
 				btResize = document.getElementById("btResize"),
 				cbAuto = document.getElementById("cbAuto"),
 				run = () => {
-					if (inText.value != old) {
-						outText.srcdoc = inText.value;
-						old = inText.value;
-					}
-					if (cbAuto.checked) {
-						setTimeout(() => {
-							run();
-						}, 100);
-					}
+					outText.srcdoc = inText.value;
 				},
 				resize = () => {
 					if (btResize.value == "vertical") {
@@ -37,9 +29,18 @@
 			btRun.addEventListener("click", run);
 			btResize.addEventListener("click", resize);
 			cbAuto.addEventListener("click", () => {
-				if (cbAuto.checked) {
-					run();
-				}
+				let loop = () => {
+					if (inText.value != old) {
+						run();
+						old = inText.value;
+					}
+					if (cbAuto.checked) {
+						setTimeout(() => {
+							loop();
+						}, 100);
+					}
+				};
+				loop();
 			});
 		});
 	</script>
