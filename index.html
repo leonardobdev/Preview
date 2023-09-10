@@ -46,10 +46,10 @@
 	</script>
 	<style>
 		* {
-			margin: 0;
+			margin: 0 auto;
 			padding: 0;
 			box-sizing: border-box;
-			font-family: Monospace;
+			font-family: "Times New Roman", Times, Serif;
 			font-size: 15px;
 			background: transparent;
 			color: inherit;
@@ -79,8 +79,8 @@
 		}
 
 		input {
-			padding: 2px;
-			width: 84px;
+			padding: 3px;
+			width: 70px;
 			height: 30px;
 		}
 
@@ -91,6 +91,9 @@
 			height: 45%;
 		}
 
+		textarea {
+			font-family: Monospace;
+		}
 		input:hover {
 			background: lightgray;
 		}
@@ -101,7 +104,7 @@
 
 		.horizontal textarea,
 		.horizontal iframe {
-			width: calc(50% - 50px);
+			width: calc(50% - 40px);
 			height: 100%;
 		}
 
@@ -119,7 +122,7 @@
 		.vertical iframe {
 			display: block;
 			width: 100%;
-			height: calc(50% - 20px);
+			height: calc(50% - 21px);
 		}
 
 		.vertical div {
