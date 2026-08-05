@@ -1,3 +1,3 @@
 # Preview
 
-https://leonardobdev.github.io/Preview/
+https://leonardobdev.github.io/preview/
